@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="神奈川県で解体工事なら西村工業。木造住宅対応。無料見積もり受付中。迅速・丁寧対応。">
+    <title>神奈川県の解体工事なら西村工業｜木造解体対応</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #fff;
+            color: #333;
+            overflow-x: hidden;
+        }
+        /* ─── Header ─────────────────────────────────────────────────────── */
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: #fff;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: none;
+        }
+        
+        header.scrolled {
+            border-bottom-color: #E5E5E5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #003D82;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        nav a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.2s ease;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FFEB3B;
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: #FFEB3B;
+            color: #003D82;
+            border-radius: 0.375rem;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(255, 235, 59, 0.25);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background: #FFE608;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 235, 59, 0.35);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: #003D82;
+            color: #fff;
+            border-radius: 0.375rem;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: #002855;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 61, 130, 0.35);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: #F5F5F5;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: none;
+        }
+        
+        .hamburger span {
+            width: 22px;
+            height: 2px;
+            background: #003D82;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 72%;
+            max-width: 320px;
+            background: #fff;
+            flex-direction: column;
+            padding: 5rem 1.5rem 2rem;
+            border-left: 1px solid #E5E5E5;
+            z-index: 49;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            display: flex;
+            transform: translateX(0);
+        }
+        
+        .mobile-menu a {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #003D82;
+            text-decoration: none;
+            padding: 1rem 0;
+            border-bottom: 1px solid #E5E5E5;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu a:hover {
+            color: #FFEB3B;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: #F5F5F5;
+            border: none;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            color: #003D82;
+            transition: all 0.3s ease;
+        }
+        
+        .close-btn:hover {
+            background: #E5E5E5;
+        }
+        
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 40;
+        }
+        
+        .mobile-overlay.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .header-container {
+                padding: 1rem 1rem;
+            }
+        }
+        /* ─── Hero Section ──────────────────────────────────────────────── */
+        
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 60px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://github.com/183x/nishimura-kogyo/blob/main/1776745797106.webp?raw=true');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 61, 130, 0.5) 0%, rgba(255, 235, 59, 0.1) 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            padding: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.1s both;
+        }
+        
+        .hero-content h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: #fff;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            color: #FFEB3B;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+        
+        .hero-content p {
+            font-size: 1.125rem;
+            color: #fff;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            animation: fadeInUp 0.8s ease-out 0.5s both;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: #fff;
+            text-decoration: none;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .scroll-indicator span {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+        }
+        
+        .scroll-indicator svg {
+            animation: bounce 2s ease-in-out infinite;
+        }
+        /* ─── News Section ──────────────────────────────────────────────── */
+        
+        .section {
+            padding: 4rem 1rem;
+        }
+        
+        .section.gray {
+            background: #F5F5F5;
+        }
+        
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 700;
+            border-left: 6px solid #FFEB3B;
+            padding-left: 1rem;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.02em;
+            color: #003D82;
+            animation: slideInLeft 0.8s ease-out;
+        }
+        
+        .news-list {
+            space-y: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .news-item {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 0.5rem;
+            border: 1px solid #E5E5E5;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .news-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        @media (min-width: 640px) {
+            .news-item {
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+        
+        .news-meta {
+            flex-shrink: 0;
+        }
+        
+        .news-date {
+            font-size: 0.75rem;
+            color: #999;
+        }
+        
+        .news-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.5rem 0.75rem;
+            background: #FFEB3B;
+            color: #003D82;
+            border-radius: 0.25rem;
+            margin-top: 0.5rem;
+        }
+        
+        .news-title {
+            flex: 1;
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: #003D82;
+        }
+        
+        .news-arrow {
+            flex-shrink: 0;
+            color: #FFEB3B;
+            transform: rotate(90deg);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        /* ─── About Section ─────────────────────────────────────────────── */
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .about-card {
+            text-align: center;
+        }
+        
+        .about-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background: #FFEB3B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: #003D82;
+            font-size: 2rem;
+        }
+        
+        .about-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #003D82;
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-card p {
+            color: #666;
+            font-size: 0.875rem;
+        }
+        
+        .about-box {
+            background: #fff;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            border: 1px solid #E5E5E5;
+        }
+        
+        .about-box h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #003D82;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-box p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        /* ─── Works Section ─────────────────────────────────────────────── */
+        
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .work-card {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            cursor: pointer;
+            background: #fff;
+            border: 1px solid #E5E5E5;
+            transition: all 0.4s ease;
+        }
+        
+        .work-card:hover {
+            transform: translateY(-1.5rem);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .work-image {
+            position: relative;
+            overflow: hidden;
+            padding-top: 66%;
+        }
+        
+        .work-image img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .work-card:hover .work-image img {
+            transform: scale(1.1);
+        }
+        
+        .work-badge {
+            position: absolute;
+            top: 0.75rem;
+            left: 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.75rem;
+            border-radius: 0.25rem;
+            transition: all 0.3s ease;
+        }
+        
+        .work-badge.before {
+            background: #003D82;
+            color: #fff;
+        }
+        
+        .work-badge.after {
+            background: #FFEB3B;
+            color: #003D82;
+        }
+        
+        .work-hint {
+            position: absolute;
+            bottom: 0.75rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 1rem;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            animation: blink 1.5s infinite;
+        }
+        
+        .work-content {
+            padding: 1rem;
+        }
+        
+        .work-type {
+            font-size: 0.75rem;
+            color: #999;
+            margin-bottom: 0.25rem;
+        }
+        
+        .work-title {
+            font-weight: 700;
+            font-size: 0.875rem;
+            color: #003D82;
+            margin-bottom: 0.25rem;
+        }
+        
+        .work-location {
+            font-size: 0.75rem;
+            color: #999;
+        }
+        /* ─── Contact Section ────────────────────────────────────────────── */
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-box {
+            background: #F5F5F5;
+            border-radius: 0.5rem;
+            padding: 2rem;
+        }
+        
+        .contact-box h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #003D82;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item p:first-child {
+            font-size: 0.875rem;
+            color: #999;
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-item p:last-child {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .contact-item a {
+            font-weight: 500;
+            color: #003D82;
+            text-decoration: none;
+        }
+        
+        .contact-item a.phone {
+            color: #FFEB3B;
+            font-size: 1.125rem;
+        }
+        
+        iframe {
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+        }
+        /* ─── Footer ─────────────────────────────────────────────────────── */
+        
+        footer {
+            background: #003D82;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        footer p {
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer p:last-child {
+            font-size: 0.75rem;
+            opacity: 0.75;
+        }
+        /* ─── Floating Buttons ──────────────────────────────────────────── */
+        
+        .floating-buttons {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            z-index: 40;
+        }
+        
+        .floating-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 0.875rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .floating-btn.phone {
+            background: #FFEB3B;
+            color: #003D82;
+        }
+        
+        .floating-btn.line {
+            background: #06c755;
+            color: #fff;
+        }
+        
+        .floating-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+        /* ─── Animations ─────────────────────────────────────────────────── */
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+        
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+        
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <a href="#home" class="logo">西村工業</a>
+            <nav>
+                <a href="#home">ホーム</a>
+                <a href="#news">新着情報</a>
+                <a href="#works">施工事例</a>
+                <a href="#about">会社概要</a>
+                <a href="#contact">お問い合わせ</a>
+                <a href="#contact" class="btn-primary">お問い合わせ</a>
+            </nav>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeBtn">×</button>
+        <a href="#home">ホーム</a>
+        <a href="#news">新着情報</a>
+        <a href="#works">施工事例</a>
+        <a href="#about">会社概要</a>
+        <a href="#contact">お問い合わせ</a>
+        <a href="#contact" class="btn-primary" style="margin-top: 1.5rem; text-align: center; justify-content: center;">お問い合わせ</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>暮らしに寄り添う丁寧な</h2>
+            <h1>解体工事</h1>
+            <p>解体工事は神奈川県の西村工業へ</p>
+            <div class="hero-buttons">
+                <div style="text-align: center;">
+                    <a href="#contact" class="btn-primary">無料見積もり</a>
+                </div>
+            </div>
+        </div>
+        <a href="#news" class="scroll-indicator">
+            <span>SCROLL</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </a>
+    </section>
+
+    <!-- News Section -->
+    <section class="section gray" id="news">
+        <div class="section-container">
+            <h2 class="section-title">新着情報</h2>
+            <div class="news-list">
+                <div class="news-item fade-in">
+                    <div class="news-meta">
+                        <p class="news-date">2026/04/21</p>
+                        <span class="news-badge">現場進捗</span>
+                    </div>
+                    <p class="news-title">神奈川県藤沢市 木造2階建解体工事 DAY 8</p>
+                    <svg class="news-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="news-item fade-in">
+                    <div class="news-meta">
+                        <p class="news-date">2026/04/20</p>
+                        <span class="news-badge">現場進捗</span>
+                    </div>
+                    <p class="news-title">神奈川県藤沢市 木造2階建解体工事 DAY 7</p>
+                    <svg class="news-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="news-item fade-in">
+                    <div class="news-meta">
+                        <p class="news-date">2026/04/19</p>
+                        <span class="news-badge">現場進捗</span>
+                    </div>
+                    <p class="news-title">神奈川県藤沢市 木造2階建解体工事 DAY 6</p>
+                    <svg class="news-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-center fade-in">
+                <a href="#news" class="btn-primary">新着情報を見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="section-container">
+            <h2 class="section-title">会社概要</h2>
+            <div class="about-grid">
+                <div class="about-card fade-in">
+                    <div class="about-icon">🛡️</div>
+                    <h3>SAFETY</h3>
+                    <p>安全第一の施工</p>
+                </div>
+                <div class="about-card fade-in">
+                    <div class="about-icon">⚡</div>
+                    <h3>SPEEDY</h3>
+                    <p>迅速な対応</p>
+                </div>
+                <div class="about-card fade-in">
+                    <div class="about-icon">✨</div>
+                    <h3>SMART</h3>
+                    <p>効率的な施工</p>
+                </div>
+            </div>
+            <div class="about-box fade-in">
+                <h3>西村工業について</h3>
+                <p>神奈川県・東京都を拠点に、木造住宅の解体工事を専門としています。代表の長年の経験と確かな技術で、安全かつ迅速に施工いたします。</p>
+                <p>建設リサイクル法を遵守し、環境に配慮した分解施工を心掛けています。地域の皆さまに安心していただける「地域に優しい解体工事」を目指しています。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section class="section gray" id="works">
+        <div class="section-container">
+            <h2 class="section-title">施工事例</h2>
+            <div class="works-grid">
+                <div class="work-card fade-in" onclick="toggleWorkImage(this)">
+                    <div class="work-image">
+                        <img src="https://github.com/183x/arukyo/blob/main/file_000000005ee07206a001908732476d11.png?raw=true" alt="施工事例" data-before="https://github.com/183x/arukyo/blob/main/file_000000005ee07206a001908732476d11.png?raw=true" data-after="https://github.com/183x/arukyo/blob/main/file_00000000df04720986a1a555a0bde45d.png?raw=true">
+                        <span class="work-badge before" data-badge="BEFORE">BEFORE</span>
+                        <span class="work-hint">タップで切替</span>
+                    </div>
+                    <div class="work-content">
+                        <p class="work-type">戸建て</p>
+                        <p class="work-title">木造2階建て家屋解体撤去処分工事</p>
+                        <p class="work-location">神奈川県藤沢市</p>
+                    </div>
+                </div>
+                <div class="work-card fade-in" onclick="toggleWorkImage(this)">
+                    <div class="work-image">
+                        <img src="https://github.com/183x/arukyo/blob/main/file_00000000e8e47206aa3a4b0cfa82564d.png?raw=true" alt="施工事例" data-before="https://github.com/183x/arukyo/blob/main/file_00000000e8e47206aa3a4b0cfa82564d.png?raw=true" data-after="https://github.com/183x/arukyo/blob/main/file_00000000e5687206a849c7dbc9b670fe.png?raw=true">
+                        <span class="work-badge before" data-badge="BEFORE">BEFORE</span>
+                        <span class="work-hint">タップで切替</span>
+                    </div>
+                    <div class="work-content">
+                        <p class="work-type">戸建て</p>
+                        <p class="work-title">木造2階建て家屋解体撤去処分工事</p>
+                        <p class="work-location">東京都渋谷区</p>
+                    </div>
+                </div>
+                <div class="work-card fade-in" onclick="toggleWorkImage(this)">
+                    <div class="work-image">
+                        <img src="https://github.com/183x/arukyo/blob/main/file_000000005ee07206a001908732476d11.png?raw=true" alt="施工事例" data-before="https://github.com/183x/arukyo/blob/main/file_000000005ee07206a001908732476d11.png?raw=true" data-after="https://github.com/183x/arukyo/blob/main/file_00000000df04720986a1a555a0bde45d.png?raw=true">
+                        <span class="work-badge before" data-badge="BEFORE">BEFORE</span>
+                        <span class="work-hint">タップで切替</span>
+                    </div>
+                    <div class="work-content">
+                        <p class="work-type">戸建て</p>
+                        <p class="work-title">木造1階建て家屋解体撤去処分工事</p>
+                        <p class="work-location">神奈川県横浜市</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center fade-in">
+                <a href="#works" class="btn-primary">施工事例を詳しく見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">お問い合わせ</h2>
+            <div class="contact-grid">
+                <div class="contact-box fade-in">
+                    <h3>お気軽にご連絡ください</h3>
+                    <div class="contact-item">
+                        <p>電話</p>
+                        <a href="tel:08062547704">080-6254-7704</a>
+                    </div>
+                    <div class="contact-item">
+                        <p>メール</p>
+                        <a href="mailto:nishimurakogyo8@gmail.com">nishimurakogyo8@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <p>営業時間</p>
+                        <p>8:00〜18:00（年中無休）</p>
+                    </div>
+                </div>
+                <div class="contact-box fade-in">
+                    <h3>会社情報</h3>
+                    <div class="contact-item">
+                        <p>会社名</p>
+                        <p>株式会社西村工業</p>
+                    </div>
+                    <div class="contact-item">
+                        <p>所在地</p>
+                        <p>〒251-0025 神奈川県藤沢市鵠沼石上2-5-1</p>
+                    </div>
+                    <div class="contact-item">
+                        <p>代表者</p>
+                        <p>西村 成久</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fade-in">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFG9LW-lYnAOPsoqL1DrDB3KIPoYxhBzl0AylqgFRWOeGC7g/viewform?usp=header" width="100%" height="600" title="お問い合わせフォーム"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 西村工業.</p>
+        <p>お問い合わせからのセールス・勧誘は固くお断りします。</p>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:08062547704" class="floating-btn phone">
+            <span>📞</span>
+            <span>電話</span>
+        </a>
+        <a href="https://lin.ee/あなたのID" target="_blank" rel="noopener noreferrer" class="floating-btn line">
+            <span>💬</span>
+            <span>LINE</span>
+        </a>
+    </div>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const closeBtn = document.getElementById('closeBtn');
+
+        hamburger.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+            mobileOverlay.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+        });
+
+        mobileOverlay.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+        });
+
+        // Close menu when link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+            });
+        });
+
+        // Work card image toggle
+        function toggleWorkImage(card) {
+            const img = card.querySelector('img');
+            const badge = card.querySelector('.work-badge');
+            const before = img.dataset.before;
+            const after = img.dataset.after;
+
+            if (img.src === before) {
+                img.src = after;
+                badge.textContent = 'AFTER';
+                badge.classList.remove('before');
+                badge.classList.add('after');
+            } else {
+                img.src = before;
+                badge.textContent = 'BEFORE';
+                badge.classList.remove('after');
+                badge.classList.add('before');
+            }
+        }
+
+        // Fade in animation on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+
+</html>
