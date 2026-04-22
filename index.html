@@ -990,6 +990,24 @@
             /* 好きに調整OK（16〜20pxがベスト） */
             height: auto;
         }
+        
+        .floating-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* ←これで間に空白 */
+        }
+        /* フォーム用（別カラー） */
+        
+        .floating-btn.form {
+            background: #003D82;
+            /* ネイビー */
+            color: #fff;
+        }
+        
+        .floating-btn.form:hover {
+            background: #002855;
+        }
     </style>
 </head>
 
@@ -1307,7 +1325,13 @@
     </span>
                         <span>LINEでお問い合わせ</span>
                     </a>
+                    ㅤ
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFG9LW-lYnAOPsoqL1DrDB3KIPoYxhBzl0AylqgFRWOeGC7g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="floating-btn form">
+                        <span>📩</span>
+                        <span>フォームでお問い合わせ</span>
+                    </a>
                 </div>
+
             </div>
         </div>
     </section>
