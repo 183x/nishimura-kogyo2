@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,19 +15,19 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         html {
             scroll-behavior: smooth;
         }
-
+        
         body {
             font-family: 'Noto Sans JP', sans-serif;
             background: #fff;
             color: #333;
             overflow-x: hidden;
         }
-
         /* ─── Header ─────────────────────────────────────────────────────── */
+        
         header {
             position: fixed;
             top: 0;
@@ -38,12 +39,12 @@
             transition: all 0.3s ease;
             box-shadow: none;
         }
-
+        
         header.scrolled {
             border-bottom-color: #E5E5E5;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
-
+        
         .header-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -52,7 +53,7 @@
             align-items: center;
             justify-content: space-between;
         }
-
+        
         .logo {
             font-size: 1.5rem;
             font-weight: 900;
@@ -61,17 +62,17 @@
             transition: transform 0.3s ease;
             letter-spacing: 0.05em;
         }
-
+        
         .logo:hover {
             transform: scale(1.05);
         }
-
+        
         nav {
             display: flex;
             align-items: center;
             gap: 2rem;
         }
-
+        
         nav a {
             font-size: 0.875rem;
             font-weight: 500;
@@ -80,7 +81,7 @@
             position: relative;
             transition: color 0.2s ease;
         }
-
+        
         nav a::after {
             content: '';
             position: absolute;
@@ -91,11 +92,11 @@
             background: #FFEB3B;
             transition: width 0.3s ease;
         }
-
+        
         nav a:hover::after {
             width: 100%;
         }
-
+        
         .btn-primary {
             display: inline-flex;
             align-items: center;
@@ -112,17 +113,17 @@
             border: none;
             cursor: pointer;
         }
-
+        
         .btn-primary:hover {
             background: #FFE608;
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(255, 235, 59, 0.35);
         }
-
+        
         .btn-primary:active {
             transform: translateY(0);
         }
-
+        
         .hamburger {
             display: none;
             flex-direction: column;
@@ -133,14 +134,14 @@
             border-radius: 0.5rem;
             border: none;
         }
-
+        
         .hamburger span {
             width: 22px;
             height: 2px;
             background: #003D82;
             transition: all 0.3s ease;
         }
-
+        
         .mobile-menu {
             display: none;
             position: fixed;
@@ -157,12 +158,12 @@
             transform: translateX(100%);
             transition: transform 0.3s ease;
         }
-
+        
         .mobile-menu.active {
             display: flex;
             transform: translateX(0);
         }
-
+        
         .mobile-menu a {
             font-size: 1.125rem;
             font-weight: 500;
@@ -172,11 +173,11 @@
             border-bottom: 1px solid #E5E5E5;
             transition: all 0.3s ease;
         }
-
+        
         .mobile-menu a:hover {
             color: #FFEB3B;
         }
-
+        
         .close-btn {
             position: absolute;
             top: 1.25rem;
@@ -191,11 +192,11 @@
             color: #003D82;
             transition: all 0.3s ease;
         }
-
+        
         .close-btn:hover {
             background: #E5E5E5;
         }
-
+        
         .mobile-overlay {
             display: none;
             position: fixed;
@@ -203,26 +204,24 @@
             background: rgba(0, 0, 0, 0.4);
             z-index: 40;
         }
-
+        
         .mobile-overlay.active {
             display: block;
         }
-
+        
         @media (max-width: 768px) {
             nav {
                 display: none;
             }
-
             .hamburger {
                 display: flex;
             }
-
             .header-container {
                 padding: 1rem 1rem;
             }
         }
-
         /* ─── Hero Section ──────────────────────────────────────────────── */
+        
         .hero {
             position: relative;
             min-height: 100vh;
@@ -232,7 +231,7 @@
             overflow: hidden;
             margin-top: 60px;
         }
-
+        
         .hero-bg {
             position: absolute;
             inset: 0;
@@ -240,13 +239,13 @@
             background-size: cover;
             background-position: center;
         }
-
+        
         .hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(135deg, rgba(0, 61, 130, 0.5) 0%, rgba(255, 235, 59, 0.1) 100%);
         }
-
+        
         .hero-content {
             position: relative;
             z-index: 10;
@@ -254,14 +253,14 @@
             max-width: 800px;
             padding: 1.5rem;
         }
-
+        
         .hero-content h2 {
             font-size: clamp(1.5rem, 3vw, 2rem);
             color: #fff;
             margin-bottom: 0.5rem;
             animation: fadeInUp 0.8s ease-out 0.2s both;
         }
-
+        
         .hero-content h1 {
             font-size: clamp(2.5rem, 8vw, 5rem);
             color: #FFEB3B;
@@ -269,14 +268,14 @@
             margin-bottom: 1.5rem;
             animation: fadeInUp 0.8s ease-out 0.3s both;
         }
-
+        
         .hero-content p {
             font-size: 1.125rem;
             color: #fff;
             margin-bottom: 2.5rem;
             animation: fadeInUp 0.8s ease-out 0.4s both;
         }
-
+        
         .hero-buttons {
             display: flex;
             flex-direction: column;
@@ -284,13 +283,13 @@
             justify-content: center;
             animation: fadeInUp 0.8s ease-out 0.5s both;
         }
-
+        
         @media (min-width: 640px) {
             .hero-buttons {
                 flex-direction: row;
             }
         }
-
+        
         .btn-secondary {
             display: inline-flex;
             align-items: center;
@@ -307,13 +306,13 @@
             border: none;
             cursor: pointer;
         }
-
+        
         .btn-secondary:hover {
             background: #002855;
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(0, 61, 130, 0.35);
         }
-
+        
         .scroll-indicator {
             position: absolute;
             bottom: 2rem;
@@ -327,30 +326,30 @@
             text-decoration: none;
             animation: float 3s ease-in-out infinite;
         }
-
+        
         .scroll-indicator span {
             font-size: 0.75rem;
             letter-spacing: 0.1em;
         }
-
+        
         .scroll-indicator svg {
             animation: bounce 2s ease-in-out infinite;
         }
-
         /* ─── News Section ──────────────────────────────────────────────── */
+        
         .section {
             padding: 4rem 1rem;
         }
-
+        
         .section.gray {
             background: #F5F5F5;
         }
-
+        
         .section-container {
             max-width: 1200px;
             margin: 0 auto;
         }
-
+        
         .section-title {
             font-size: clamp(1.75rem, 3vw, 2.5rem);
             font-weight: 700;
@@ -361,19 +360,19 @@
             color: #003D82;
             animation: slideInLeft 0.8s ease-out;
         }
-
+        
         .section-title-blue {
             color: #003D82;
             font-size: clamp(1.5rem, 2.5vw, 2rem);
             font-weight: 700;
             margin-bottom: 2rem;
         }
-
+        
         .news-list {
             space-y: 1rem;
             margin-bottom: 2rem;
         }
-
+        
         .news-item {
             display: flex;
             flex-direction: column;
@@ -384,11 +383,11 @@
             border: 1px solid #E5E5E5;
             transition: box-shadow 0.3s ease;
         }
-
+        
         .news-item:hover {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
-
+        
         @media (min-width: 640px) {
             .news-item {
                 flex-direction: row;
@@ -396,16 +395,16 @@
                 gap: 1rem;
             }
         }
-
+        
         .news-meta {
             flex-shrink: 0;
         }
-
+        
         .news-date {
             font-size: 0.75rem;
             color: #999;
         }
-
+        
         .news-badge {
             display: inline-block;
             font-size: 0.75rem;
@@ -416,25 +415,25 @@
             border-radius: 0.25rem;
             margin-top: 0.5rem;
         }
-
+        
         .news-title {
             flex: 1;
             font-weight: 500;
             font-size: 0.875rem;
             color: #003D82;
         }
-
+        
         .news-arrow {
             flex-shrink: 0;
             color: #FFEB3B;
             transform: rotate(90deg);
         }
-
+        
         .text-center {
             text-align: center;
         }
-
         /* ─── About Section ─────────────────────────────────────────────── */
+        
         .about-intro {
             font-size: 1.125rem;
             line-height: 1.8;
@@ -442,41 +441,41 @@
             margin-bottom: 2rem;
             text-align: center;
         }
-
+        
         .about-intro strong {
             color: #003D82;
             font-weight: 700;
         }
-
+        
         .about-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
-
+        
         .about-card {
             text-align: center;
         }
-
+        
         .about-card-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-
+        
         .about-card h3 {
             font-size: 1.25rem;
             font-weight: 700;
             color: #003D82;
             margin-bottom: 0.5rem;
         }
-
+        
         .about-card p {
             color: #666;
             font-size: 0.875rem;
             line-height: 1.6;
         }
-
+        
         .about-description {
             background: #fff;
             border-radius: 0.5rem;
@@ -485,23 +484,23 @@
             line-height: 1.8;
             color: #333;
         }
-
+        
         .about-description p {
             margin-bottom: 1rem;
         }
-
+        
         .about-description p:last-child {
             margin-bottom: 0;
         }
-
         /* ─── Works Section ─────────────────────────────────────────────── */
+        
         .works-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
-
+        
         .work-card {
             border-radius: 0.5rem;
             overflow: hidden;
@@ -510,19 +509,19 @@
             border: 1px solid #E5E5E5;
             transition: all 0.4s ease;
         }
-
+        
         .work-card:hover {
             transform: translateY(-1.5rem);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
         }
-
+        
         .work-image {
             position: relative;
             overflow: hidden;
             padding-top: 66%;
             background: #F5F5F5;
         }
-
+        
         .work-image img {
             position: absolute;
             inset: 0;
@@ -531,11 +530,11 @@
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-
+        
         .work-card:hover .work-image img {
             transform: scale(1.1);
         }
-
+        
         .work-badge {
             position: absolute;
             top: 0.75rem;
@@ -546,17 +545,17 @@
             border-radius: 0.25rem;
             transition: all 0.3s ease;
         }
-
+        
         .work-badge.before {
             background: #003D82;
             color: #fff;
         }
-
+        
         .work-badge.after {
             background: #FFEB3B;
             color: #003D82;
         }
-
+        
         .work-hint {
             position: absolute;
             bottom: 0.75rem;
@@ -569,37 +568,37 @@
             color: #fff;
             animation: blink 1.5s infinite;
         }
-
+        
         .work-content {
             padding: 1rem;
         }
-
+        
         .work-type {
             font-size: 0.75rem;
             color: #999;
             margin-bottom: 0.25rem;
         }
-
+        
         .work-title {
             font-weight: 700;
             font-size: 0.875rem;
             color: #003D82;
             margin-bottom: 0.25rem;
         }
-
+        
         .work-location {
             font-size: 0.75rem;
             color: #999;
         }
-
         /* ─── Environment Section ────────────────────────────────────────── */
+        
         .env-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
-
+        
         .env-card {
             background: #fff;
             border-radius: 0.5rem;
@@ -607,94 +606,94 @@
             border: 1px solid #E5E5E5;
             text-align: center;
         }
-
+        
         .env-card h3 {
             font-size: 1.125rem;
             font-weight: 700;
             color: #003D82;
             margin-bottom: 1rem;
         }
-
+        
         .env-card p {
             color: #666;
             font-size: 0.875rem;
             line-height: 1.6;
         }
-
         /* ─── Contact Section ────────────────────────────────────────────── */
+        
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
-
+        
         .contact-box {
             background: #F5F5F5;
             border-radius: 0.5rem;
             padding: 2rem;
         }
-
+        
         .contact-box h3 {
             font-size: 1.25rem;
             font-weight: 700;
             color: #003D82;
             margin-bottom: 1.5rem;
         }
-
+        
         .contact-item {
             margin-bottom: 1.5rem;
         }
-
+        
         .contact-item p:first-child {
             font-size: 0.875rem;
             color: #999;
             margin-bottom: 0.25rem;
         }
-
+        
         .contact-item p:last-child,
         .contact-item a {
             font-weight: 500;
             color: #333;
         }
-
+        
         .contact-item a {
             text-decoration: none;
             transition: color 0.3s ease;
         }
-
+        
         .contact-item a:hover {
             color: #FFEB3B;
         }
-
+        
         .contact-item a.phone {
             color: #FFEB3B;
             font-size: 1.125rem;
         }
-
+        
         .contact-item a.phone:hover {
             color: #FFE608;
         }
-
         /* ─── Footer ─────────────────────────────────────────────────────── */
+        
         footer {
             background: #003D82;
             color: #fff;
             padding: 2rem;
             text-align: center;
         }
-
+        
         footer p {
             font-size: 0.875rem;
             margin-bottom: 0.5rem;
         }
-
+        
         footer p:last-child {
             font-size: 0.75rem;
             opacity: 0.75;
         }
-
         /* ─── Floating Buttons ──────────────────────────────────────────── */
+        
         .floating-buttons {
             position: fixed;
             bottom: 1.5rem;
@@ -704,7 +703,7 @@
             gap: 0.75rem;
             z-index: 40;
         }
-
+        
         .floating-btn {
             display: flex;
             align-items: center;
@@ -720,23 +719,23 @@
             border: none;
             cursor: pointer;
         }
-
+        
         .floating-btn.phone {
             background: #FFEB3B;
             color: #003D82;
         }
-
+        
         .floating-btn.line {
             background: #06c755;
             color: #fff;
         }
-
+        
         .floating-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
-
         /* ─── Animations ─────────────────────────────────────────────────── */
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -747,7 +746,7 @@
                 transform: translateY(0);
             }
         }
-
+        
         @keyframes slideInLeft {
             from {
                 opacity: 0;
@@ -758,51 +757,104 @@
                 transform: translateX(0);
             }
         }
-
+        
         @keyframes float {
-            0%, 100% {
+            0%,
+            100% {
                 transform: translateY(0px);
             }
             50% {
                 transform: translateY(-8px);
             }
         }
-
+        
         @keyframes bounce {
-            0%, 100% {
+            0%,
+            100% {
                 transform: translateY(0);
             }
             50% {
                 transform: translateY(-8px);
             }
         }
-
+        
         @keyframes blink {
-            0%, 100% {
+            0%,
+            100% {
                 opacity: 0.3;
             }
             50% {
                 opacity: 1;
             }
         }
-
+        
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
-
+        
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
+        /* ─── Service Alternating Layout ───────────────────────────── */
+        
+        .service-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .service-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .service-image {
+            flex: 1;
+        }
+        
+        .service-image img {
+            width: 100%;
+            border-radius: 0.5rem;
+            object-fit: cover;
+        }
+        
+        .service-text {
+            flex: 1;
+        }
+        
+        .service-text h3 {
+            font-size: 1.5rem;
+            color: #003D82;
+            margin-bottom: 1rem;
+        }
+        
+        .service-text p {
+            line-height: 1.8;
+            color: #555;
+        }
+        /* スマホ対応 */
+        
+        @media (max-width: 768px) {
+            .service-item {
+                flex-direction: column !important;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header id="header">
         <div class="header-container">
-            <a href="#home" class="logo">西村工業</a>
+            <a href="#home" class="logo">株式会社西村工業</a>
             <nav>
                 <a href="#home">トップ</a>
                 <a href="#about">西村工業について</a>
@@ -836,9 +888,9 @@
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h2>暮らしに寄り添う丁寧な</h2>
+            <h2>地域に優しい</h2>
             <h1>解体工事</h1>
-            <p>解体工事は神奈川県の西村工業へ</p>
+            <p>を、神奈川から未来へ</p>
         </div>
         <a href="#about" class="scroll-indicator">
             <span>SCROLL</span>
@@ -853,43 +905,89 @@
     <section class="section" id="about">
         <div class="section-container">
             <h2 class="section-title">西村工業について</h2>
-            
+
             <div class="about-intro fade-in">
-                <strong>EARLY・AFFORDABLE・RELIABLE</strong>――確かな技術と信頼で解体のプロフェッショナルとして貢献します
+                <strong>SAFETY・SPEEDY・SMART</strong>――確かな技術と信頼で解体のプロフェッショナルとして貢献します
             </div>
 
             <div class="about-description fade-in">
-                <p>西村工業のホームページをご覧いただき、誠にありがとうございます。私たちは神奈川県藤沢市を拠点に、木造住宅の解体工事を専門としています。</p>
-                <p>代表の西村成久は建物解体の分野で豊富な経験を持つエキスパートです。その長年の知識と技術を活かし、事前調査や打ち合わせを徹底して行うことで、建設リサイクル法を遵守した高品質な施工をお届けしています。</p>
-                <p>特に、私たちは「EARLY（早い）・AFFORDABLE（安い）・RELIABLE（安心）」の「3つの強み」を軸に、全ての現場で最善を尽くすことを心掛けています。また、騒音・振動・粉塵などの影響を最小限に抑えるため、防護シートの活用や丁寧な作業を徹底。地域にお住まいの皆さまにも安心していただける「地域に優しい分解施工」を目指しています。</p>
+                <p>西村工業のホームページをご覧いただき、誠にありがとうございます。私たちは藤沢市を拠点に、神奈川県全域で木造、鉄骨造、RC造の建物を対象とした解体工事や産業廃棄物の収集運搬業務を手掛けています。</p>
+                <p>代表は建物解体の分野で長年の経験を持つエキスパートです。その知識と技術を活かし、事前調査や打ち合わせを徹底して行うことで、建設リサイクル法を遵守した高品質な施工をお届けしています。</p>
+                <p>特に、私たちは「SAFETY（安全）・SPEEDY（迅速）・SMART（効率的）」の「3S原則」を軸に、全ての現場で最善を尽くすことを心掛けています。また、騒音・振動・粉塵などの影響を最小限に抑えるため、防護シートの活用や丁寧な作業を徹底。地域にお住まいの皆さまにも安心していただける「地域に優しい解体工事」を目指しています。</p>
                 <p>これからも、確かな技術と真心をもって地域社会に貢献してまいります。引き続き、ご支援ご指導のほど、よろしくお願い申し上げます。</p>
             </div>
 
-            <div class="about-grid" style="margin-top: 3rem;">
-                <div class="about-card fade-in">
-                    <div class="about-card-icon">⚡</div>
-                    <h3>EARLY</h3>
-                    <p>早い対応と迅速な施工で、お客様のスケジュールに対応します</p>
+    </section>
+
+
+    <section class="section" id="service">
+        <div class="section-container">
+            <h2 class="section-title">西村工業の事業紹介</h2>
+
+            <div class="service-section">
+
+                <!-- ① 木造解体 -->
+                <div class="service-item fade-in">
+                    <div class="service-image">
+                        <img src="https://github.com/183x/nishimura-kogyo2/blob/main/86CB7678-C479-44B4-902E-357C0923862D.jpg?raw=true" alt="木造解体">
+                    </div>
+                    <div class="service-text">
+                        <h3>木造解体工事</h3>
+                        <p>
+                            木造建物は使用しなくなると、老朽化が進行し、放置すると地震や台風などの自然災害で倒壊するリスクが高まります。また、治安にも悪影響を及ぼすことがあります。不要になった建物は早期に解体し、その土地を有効活用することが求められます。 西村工業では、解体にあたって重機の使用を最小限に抑え、熟練の作業員による丁寧な手作業で進めています。これにより、近隣住民への影響を最小限に抑え、安心・安全な施工を実現しています。事前の調査を基にしっかりと計画を立て、お客様に安心してお任せいただける体制を整えています。
+                        </p>
+                    </div>
                 </div>
-                <div class="about-card fade-in">
-                    <div class="about-card-icon">💰</div>
-                    <h3>AFFORDABLE</h3>
-                    <p>適正価格で高品質な解体工事をご提供します</p>
+
+                <!-- ② RC -->
+                <div class="service-item fade-in">
+                    <div class="service-image">
+                        <img src="https://github.com/183x/nishimura-kogyo2/blob/main/B0680486-6790-4298-AE50-BC0B6F93FAE9.jpg?raw=true" alt="RC">
+                    </div>
+                    <div class="service-text">
+                        <h3>RC造解体工事</h3>
+                        <p>
+                            鉄筋コンクリート造（RC造）はその優れた耐久性により、解体作業には特別な技術と時間が求められます。西村工業では、RC造解体の豊富な経験を持つ技術者が多数在籍しており、振動や騒音、破片の発生を最小限に抑えることができます。 早期のご相談により、計画的で効率的な解体工事を提供し、お客様に安心していただける施工を実現します。
+                        </p>
+                    </div>
                 </div>
-                <div class="about-card fade-in">
-                    <div class="about-card-icon">🛡️</div>
-                    <h3>RELIABLE</h3>
-                    <p>安全第一で、信頼できる解体工事を実現します</p>
+
+                <!-- ③ 内装解体工事 -->
+                <div class="service-item fade-in">
+                    <div class="service-image">
+                        <img src="https://d1i7na1hjknxjq.cloudfront.net/uploads/storage/image/file/401667/optimized_nbyYyjXXbvbkP8bunMrN2g.png" alt="内装解体">
+                    </div>
+                    <div class="service-text">
+                        <h3>内装解体工事</h3>
+                        <p>
+                            内装解体は、主にテナントや賃貸物件の退去時に行われる工事です。入居時の状態に戻す「原状回復工事」や、コンクリートの打ちっぱなし状態に戻す「スケルトン工事」を提供しています。 他の入居者や建物オーナー様への配慮を十分に行いながら、熟練した技術者が迅速で丁寧な施工を進めます。無駄のない作業を通じて、スムーズかつ効率的に工事を完了させ、安心して次のステップに進めるようサポートします。
+                        </p>
+                    </div>
                 </div>
+
+                <!-- ② リサイクル -->
+                <div class="service-item fade-in">
+                    <div class="service-image">
+                        <img src="https://d1i7na1hjknxjq.cloudfront.net/uploads/storage/image/file/401668/optimized_a-qKktnxAxizSKkKsIhZ0Q.png" alt="産業廃棄物">
+                    </div>
+                    <div class="service-text">
+                        <h3>産業廃棄物の収集運搬</h3>
+                        <p>
+                            解体工事に伴い発生する木材や鋼材などの廃棄物は、「廃棄物処理法」に従い適正に処理する必要があります。西村工業は、神奈川県の認可を受けた信頼の収集運搬業者として、廃棄物の分別から運搬までを一貫して対応します。 私たちは、循環型社会の実現を目指し、責任感を持って持続可能な方法で廃棄物処理を行い、環境保護にも積極的に貢献しています。
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
 
     <!-- Business Section -->
     <section class="section gray" id="business">
         <div class="section-container">
             <h2 class="section-title">事業内容</h2>
-            
+
             <div class="about-description fade-in">
                 <p>西村工業は、神奈川県藤沢市を拠点に、木造住宅の解体工事を専門としています。豊富な経験と技術で、安全かつ迅速に対応。地域の皆さまに安心していただける環境づくりを心掛けています。</p>
             </div>
@@ -962,26 +1060,6 @@
         </div>
     </section>
 
-    <!-- Environment Section -->
-    <section class="section gray" id="environment">
-        <div class="section-container">
-            <h2 class="section-title">働く環境・社風</h2>
-            <div class="env-grid">
-                <div class="env-card fade-in">
-                    <h3>サポート体制</h3>
-                    <p>経験豊富な先輩がしっかりとサポートし、成長をバックアップします。</p>
-                </div>
-                <div class="env-card fade-in">
-                    <h3>職場環境</h3>
-                    <p>意見交換がしやすく、チームワークを大切にした風通しの良い職場です。</p>
-                </div>
-                <div class="env-card fade-in">
-                    <h3>一日の流れ</h3>
-                    <p>現場での作業を通じて、効率的かつ安全に一日を進めます。</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section class="section" id="contact">
@@ -992,7 +1070,7 @@
                     <h3>お気軽にご連絡ください</h3>
                     <div class="contact-item">
                         <p>電話</p>
-                        <a href="tel:0466960528" >0466-96-0528</a>
+                        <a href="tel:0466960528">0466-96-0528</a>
                     </div>
                     <div class="contact-item">
                         <p>FAX</p>
@@ -1010,7 +1088,7 @@
                         <p>対応エリア</p>
                         <p>神奈川県・東京都</p>
                     </div>
-                    
+
                     <div class="contact-item">
                         <p>E-mail</p>
                         <p>nishimurakogyo8@gmail.com</p>
@@ -1030,15 +1108,16 @@
                         <p>所在地</p>
                         <p>〒251-0025<br>神奈川県藤沢市鵠沼石上2-5-1</p>
                     </div>
-                    
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.851982688589!2d139.4850957763694!3d35.33449694894216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60184fb54e6f498b%3A0x76a7d7ba481f3cd3!2z44CSMjUxLTAwMjUg56We5aWI5bed55yM6Jek5rKi5biC6bWg5rK855-z5LiK77yS5LiB55uu77yV4oiS77yR!5e0!3m2!1sja!2sjp!4v1776859767336!5m2!1sja!2sjp" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.851982688589!2d139.4850957763694!3d35.33449694894216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60184fb54e6f498b%3A0x76a7d7ba481f3cd3!2z44CSMjUxLTAwMjUg56We5aWI5bed55yM6Jek5rKi5biC6bWg5rK855-z5LiK77yS5LiB55uu77yV4oiS77yR!5e0!3m2!1sja!2sjp!4v1776859767336!5m2!1sja!2sjp"
+                        width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <div class="fade-in" style="margin-top: 2rem;">
                 <div style="background: #F5F5F5; border-radius: 0.5rem; padding: 2rem; text-align: center;">
-                    <h3 style="color: #003D82; margin-bottom: 1rem;">お問い合わせフォーム</h3>
+                    <h3 style="color: #003D82; margin-bottom: 1rem;">LINEからお問い合わせ</h3>
                     <p style="color: #666; margin-bottom: 1.5rem;">ご不明な点やご質問がございましたら、お気軽にお問い合わせください。</p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFG9LW-lYnAOPsoqL1DrDB3KIPoYxhBzl0AylqgFRWOeGC7g/viewform?usp=header" class="btn-primary" style="display: inline-block;">
+                    <a href="https://line.me/R/ti/p/@480kiftg" class="btn-primary" style="display: inline-block;">
     お問い合わせ
 </a>
                 </div>
@@ -1058,7 +1137,7 @@
             <span>📞</span>
             <span>電話</span>
         </a>
-        <a href="https://lin.ee/あなたのID" target="_blank" rel="noopener noreferrer" class="floating-btn line">
+        <a href="https://line.me/R/ti/p/@480kiftg" target="_blank" rel="noopener noreferrer" class="floating-btn line">
             <span>💬</span>
             <span>LINE</span>
         </a>
@@ -1146,4 +1225,5 @@
         });
     </script>
 </body>
+
 </html>
